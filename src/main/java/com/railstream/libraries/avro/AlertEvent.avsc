@@ -1,0 +1,63 @@
+{
+  "namespace": "com.railstream.libraries.schemas",
+  "type": "record",
+  "name": "AlertEvent",
+  "doc": "Alert generated from sensor data anomalies",
+  "fields": [
+    {
+      "name": "alertId",
+      "type": "string",
+      "doc": "Unique alert identifier"
+    },
+    {
+      "name": "sensorId",
+      "type": "string",
+      "doc": "Sensor that triggered the alert"
+    },
+    {
+      "name": "equipmentId",
+      "type": "string",
+      "doc": "Equipment associated with the sensor"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "doc": "When the alert was generated"
+    },
+    {
+      "name": "temperature",
+      "type": "double",
+      "doc": "Temperature value that triggered alert"
+    },
+    {
+      "name": "threshold",
+      "type": "double",
+      "doc": "Threshold that was exceeded"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "Location of the sensor"
+    },
+    {
+      "name": "severity",
+      "type": {
+        "type": "enum",
+        "name": "AlertSeverity",
+        "symbols": ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+      },
+      "doc": "Severity level of the alert"
+    },
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "Human readable alert message"
+    },
+    {
+      "name": "acknowledged",
+      "type": "boolean",
+      "default": false,
+      "doc": "Whether alert has been acknowledged"
+    }
+  ]
+}

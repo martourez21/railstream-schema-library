@@ -1,0 +1,62 @@
+{
+  "namespace": "com.railstream.libraries.schemas",
+  "type": "record",
+  "name": "SensorData",
+  "doc": "Raw sensor data from industrial IoT devices",
+  "fields": [
+    {
+      "name": "sensorId",
+      "type": "string",
+      "doc": "Unique identifier for the sensor device"
+    },
+    {
+      "name": "equipmentId",
+      "type": "string",
+      "doc": "Identifier for the equipment this sensor is attached to"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "doc": "Unix timestamp in seconds when reading was taken"
+    },
+    {
+      "name": "temperature",
+      "type": "double",
+      "doc": "Temperature reading value"
+    },
+    {
+      "name": "pressure",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Optional pressure reading value"
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "doc": "Measurement unit (e.g., Celsius, Fahrenheit, PSI)"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "Physical location of the sensor"
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "SensorStatus",
+        "symbols": ["ONLINE", "OFFLINE", "ERROR", "MAINTENANCE"]
+      },
+      "doc": "Operational status of the sensor"
+    },
+    {
+      "name": "metadata",
+      "type": ["null", {
+        "type": "map",
+        "values": "string"
+      }],
+      "default": null,
+      "doc": "Additional sensor metadata"
+    }
+  ]
+}

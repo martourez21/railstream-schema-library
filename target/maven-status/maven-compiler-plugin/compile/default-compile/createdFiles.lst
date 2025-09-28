@@ -1,0 +1,8 @@
+com\railstream\libraries\schemas\SensorOutput$Builder.class
+com\railstream\libraries\schemas\SensorStatus.class
+com\railstream\libraries\schemas\SensorData.class
+com\railstream\libraries\schemas\SensorOutput.class
+com\railstream\libraries\schemas\AlertEvent.class
+com\railstream\libraries\schemas\SensorData$Builder.class
+com\railstream\libraries\schemas\AlertSeverity.class
+com\railstream\libraries\schemas\AlertEvent$Builder.class

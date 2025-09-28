@@ -1,0 +1,64 @@
+{
+  "namespace": "com.railstream.libraries.schemas",
+  "type": "record",
+  "name": "SensorOutput",
+  "doc": "Aggregated sensor metrics for a time window",
+  "fields": [
+    {
+      "name": "equipmentId",
+      "type": "string",
+      "doc": "Identifier for the equipment"
+    },
+    {
+      "name": "windowStart",
+      "type": "long",
+      "doc": "Window start time in milliseconds"
+    },
+    {
+      "name": "windowEnd",
+      "type": "long",
+      "doc": "Window end time in milliseconds"
+    },
+    {
+      "name": "averageTemperature",
+      "type": "double",
+      "doc": "Average temperature over the window"
+    },
+    {
+      "name": "maxTemperature",
+      "type": "double",
+      "doc": "Maximum temperature in the window"
+    },
+    {
+      "name": "minTemperature",
+      "type": "double",
+      "doc": "Minimum temperature in the window"
+    },
+    {
+      "name": "sensorCount",
+      "type": "int",
+      "doc": "Number of sensors aggregated"
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "doc": "Measurement unit"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "doc": "Location of the equipment"
+    },
+    {
+      "name": "processingTime",
+      "type": "long",
+      "doc": "When this aggregation was processed"
+    },
+    {
+      "name": "anomalyScore",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Optional anomaly detection score"
+    }
+  ]
+}
