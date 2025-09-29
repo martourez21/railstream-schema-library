@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.railstream</groupId>
     <artifactId>railstream-schema-library</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <name>railstream-schema-library</name>
 
     <parent>
@@ -16,7 +16,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <avro.version>1.11.4</avro.version>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
@@ -62,7 +62,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Javadoc Plugin (optional, for generating Javadocs) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
